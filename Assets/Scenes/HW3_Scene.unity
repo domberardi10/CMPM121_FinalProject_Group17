@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 349680319}
-  m_IndirectSpecularColor: {r: 0.010593437, g: 0.038121164, b: 0.05269801, a: 1}
+  m_IndirectSpecularColor: {r: 0.01059354, g: 0.03812149, b: 0.05269844, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -571,26 +571,22 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!95 &349680320
-Animator:
-  serializedVersion: 4
+--- !u!111 &349680320
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349680316}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3ef7649323749854fa9bd8049ec51e23, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 62b93f2e5cbc1ce4090c67687632cb8d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 62b93f2e5cbc1ce4090c67687632cb8d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &392332100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7114,7 +7110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2129137156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7225,6 +7221,7 @@ GameObject:
   - component: {fileID: 2135972647}
   - component: {fileID: 2135972646}
   - component: {fileID: 2135972649}
+  - component: {fileID: 2135972650}
   m_Layer: 0
   m_Name: EmissiveLantern
   m_TagString: Untagged
@@ -7323,6 +7320,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emissionTimer: 0
+--- !u!111 &2135972650
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135972644}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2bd6ced7c6760904c8d29a4d47395d16, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2bd6ced7c6760904c8d29a4d47395d16, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &543450653270697318
 Transform:
   m_ObjectHideFlags: 0
