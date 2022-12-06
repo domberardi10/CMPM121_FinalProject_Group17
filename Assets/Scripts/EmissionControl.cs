@@ -21,13 +21,13 @@ public class EmissionControl : MonoBehaviour
     {
 
         emissionTimer += Time.deltaTime;
-        if (emissionTimer < 5f){
+        if (emissionTimer < 5f && emissionTimer > 4f){
             myMaterial.SetColor("_EmissionColor", currentColor * 0.999f);
-            currentColor = currentColor * 0.999f;
+            currentColor = currentColor * 0.998f;
         }
-        if (emissionTimer > 5f){
+        if (emissionTimer > 5f && emissionTimer < 6f){
             myMaterial.SetColor("_EmissionColor", currentColor * 1.001f);
-            currentColor = currentColor * 1.001f;
+            currentColor = currentColor * 1.002f;
         }
         if (emissionTimer >= 10f){
             emissionTimer = 0f;
