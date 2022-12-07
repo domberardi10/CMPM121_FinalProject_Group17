@@ -15,17 +15,21 @@ public class AnimatorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if(Input.GetKeyDown(KeyCode.D)){
+         if(Input.GetKey(KeyCode.D)){
             anim.SetBool("isRight", true); 
             anim.SetBool("isLeft", false); 
+            anim.SetBool("isIdle", false); 
         }
-        else if(Input.GetKeyDown(KeyCode.A)){
+        else if(Input.GetKey(KeyCode.A)){
             anim.SetBool("isLeft", true );
-             anim.SetBool("isRight", false);   
+             anim.SetBool("isRight", false);  
+             anim.SetBool("isIdle", false);  
         }
-        else if(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)){
-            anim.SetBool("isLeft", true );
-             anim.SetBool("isRight", false);   
+       
+        else{
+             anim.SetBool("isLeft", false );
+             anim.SetBool("isRight", false); 
+             anim.SetBool("isIdle", true); 
         }
     }
 }
