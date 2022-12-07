@@ -31,8 +31,9 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 movement = new Vector2(movementX, movementY);
-
-        rb.AddForce(movement * speed);
+        if ((Mathf.Abs(movementX) < 1.1) && (Mathf.Abs(movementY) < 1.1)){
+            rb.AddForce(movement * speed);
+        }
     }
 
 }

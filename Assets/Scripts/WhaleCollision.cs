@@ -10,8 +10,13 @@ public class WhaleCollision : MonoBehaviour
 
     public GameObject whale;
 
+    public GameSceneManager sceneMgr;
+
+    private AudioSource whaleNoise;
+
     void Start()
     {
+        whaleNoise = GetComponent<AudioSource>();
         rend = GetComponent<Renderer>();
         rend.enabled = false;
     }
@@ -21,10 +26,11 @@ public class WhaleCollision : MonoBehaviour
         {
             if (!rend.enabled)
             {
+                whaleNoise.Play();
                 rend.enabled = true;
             }
             Vector3 whalePos = whale.transform.position;
-            whalePos.z += 1f;
+            whalePos.z -= .35f;
             whale.transform.position = whalePos;
         }
     }
@@ -32,7 +38,7 @@ public class WhaleCollision : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            Debug.Log("WhaleHit");
+            sceneMgr.LoadEndScene();
         }
     }
 }
