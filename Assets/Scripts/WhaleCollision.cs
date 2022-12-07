@@ -20,7 +20,7 @@ public class WhaleCollision : MonoBehaviour
         rend = GetComponent<Renderer>();
         rend.enabled = false;
     }
-    void Update()
+    void FixedUpdate()
     {
         if (chestflag.WhaleBool)
         {
@@ -30,7 +30,7 @@ public class WhaleCollision : MonoBehaviour
                 rend.enabled = true;
             }
             Vector3 whalePos = whale.transform.position;
-            whalePos.z -= .35f;
+            whalePos.z -= 2f;
             whale.transform.position = whalePos;
         }
     }
