@@ -1,8 +1,8 @@
 # CMPM121_FinalProject_Group17
 Final project for UCSC CMPM121 - Game Technologies. Group project to create a single scene with only one light source.
 
--Nathan Prieto, Dominic Berardi, Omar Alkharji
--Instructor: David Abramov
+- Created by Nathan Prieto, Dominic Berardi, Omar Alkharji
+- Instructor: David Abramov
 
 DESCRIPTION:
 In this 2.5D side-scrolling slender-esque/scuffed horror game, 
